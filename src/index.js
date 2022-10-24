@@ -3,19 +3,15 @@ import fs from 'fs';
 import path from 'path';
 import { cwd } from 'process';
 
-const getAbsolutePath = (filepath) => path.resolve(cwd(), filepath);
-const readFile = (path) => fs.readFileSync(path, 'utf-8');
-const getData = (data) => JSON.parse(data);
-
 const generateDiff = (filepath1, filepath2) => {
-  const path1 = getAbsolutePath(filepath1);
-  const path2 = getAbsolutePath(filepath2);
+  const path1 = path.resolve(cwd(), filepath1);
+  const path2 = path.resolve(cwd(), filepath2);
 
-  const fileContent1 = readFile(path1);
-  const fileContent2 = readFile(path2);
+  const fileContent1 = fs.readFileSync(path1, 'utf-8');
+  const fileContent2 = fs.readFileSync(path2, 'utf-8');
 
-  const data1 = getData(fileContent1);
-  const data2 = getData(fileContent2);
+  const data1 = JSON.parse(fileContent1)
+  const data2 = JSON.parse(fileContent2);
 
   const keys1 = Object.keys(data1);
   const keys2 = Object.keys(data2);
