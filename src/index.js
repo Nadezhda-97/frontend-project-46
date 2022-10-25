@@ -10,7 +10,7 @@ const generateDiff = (filepath1, filepath2) => {
   const fileContent1 = fs.readFileSync(path1, 'utf-8');
   const fileContent2 = fs.readFileSync(path2, 'utf-8');
 
-  const data1 = JSON.parse(fileContent1)
+  const data1 = JSON.parse(fileContent1);
   const data2 = JSON.parse(fileContent2);
 
   const keys1 = Object.keys(data1);
