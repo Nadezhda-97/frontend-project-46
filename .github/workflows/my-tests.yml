@@ -5,8 +5,24 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-      - run: npm install
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: make install
 
       - name: run linter
         run: make lint
+
+      - name: run jest
+        run: NODE_OPTIONS=--experimental-vm-modules npx jest
+
+      - name: Test & publish code coverage
+        uses: paambaati/codeclimate-action@v3.0.0
+        env: 
+          MY_SECRET: ${{ secrets.MY_SECRET }}
+        with:
+          coverageCommand: NODE_OPTIONS=--experimental-vm-modules npx jest --coverage
+          debug: true
