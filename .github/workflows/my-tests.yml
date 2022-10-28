@@ -23,12 +23,12 @@ jobs:
         run: make lint
 
       - name: run jest
-        run: NODE_OPTIONS=--experimental-vm-modules npx jest
+        run: make test
 
       - name: Test & publish code coverage
         uses: paambaati/codeclimate-action@v3.0.0
         env: 
           MY_SECRET: ${{ secrets.MY_SECRET }}
         with:
-          coverageCommand: NODE_OPTIONS=--experimental-vm-modules npx jest --coverage
+          coverageCommand: make test-coverage
           debug: true
