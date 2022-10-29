@@ -7,5 +7,7 @@
 ### Demo
 
 #### Comparing flat json files
-
 [![asciicast step 3](https://asciinema.org/a/lbNNz4IfEAGDjQgZS8juzySaT.svg)](https://asciinema.org/a/lbNNz4IfEAGDjQgZS8juzySaT)
+
+#### Comparing flat yaml files
+[![asciicast step 5](https://asciinema.org/a/uXDzmh8oijb9yh9ztpdaiK5dc.svg)](https://asciinema.org/a/uXDzmh8oijb9yh9ztpdaiK5dc)
