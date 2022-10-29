@@ -5,4 +5,7 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/32cb0a6e0700956cbdef/test_coverage)](https://codeclimate.com/github/Nadezhda-97/frontend-project-46/test_coverage)
 
 ### Demo
-[![asciicast step 3](https://asciinema.org/a/OspjCqPcfDN4zsKLznBDu5Gja.svg)](https://asciinema.org/a/OspjCqPcfDN4zsKLznBDu5Gja)
+
+#### Comparing flat json files
+
+[![asciicast step 3](https://asciinema.org/a/lbNNz4IfEAGDjQgZS8juzySaT.svg)](https://asciinema.org/a/lbNNz4IfEAGDjQgZS8juzySaT)
