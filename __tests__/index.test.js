@@ -11,7 +11,7 @@ const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8'
 
 const filepath1 = getFixturePath('file1.json');
 const filepath2 = getFixturePath('file2.json');
-const expectedResult = readFile('result.json').trim();
+const expectedResult = readFile('result.yml').trim();
 
 test('differences', () => {
   expect(generateDiff(filepath1, filepath2)).toEqual(expectedResult);
