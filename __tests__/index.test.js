@@ -14,7 +14,7 @@ test('differences', () => {
   const filepath2 = getFixturePath('file2.json');
   const filepath3 = getFixturePath('file3.yml');
   const filepath4 = getFixturePath('file4.yaml');
-  const expectedResult = readFile('result.txt').trim();
+  const expectedResult = readFile('result.txt');
 
   expect(generateDiff(filepath1, filepath2)).toEqual(expectedResult);
   expect(generateDiff(filepath3, filepath4)).toEqual(expectedResult);
