@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import stylish from '../formatters/stylish.js';
 
 const buildTree = (data1, data2) => {
   const keys1 = Object.keys(data1);
@@ -20,15 +19,15 @@ const buildTree = (data1, data2) => {
     }
 
     if (!_.isEqual(data1[key], data2[key])) {
-      return { name: key, type: 'changed', value1: data1[key], value2: data2[key] };
+      return {
+        name: key, type: 'changed', value1: data1[key], value2: data2[key],
+      };
     }
 
     return { name: key, type: 'unchanged', value: data1[key] };
-
   });
 
   return result;
 };
-  
+
 export default buildTree;
-  
