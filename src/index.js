@@ -3,9 +3,9 @@ import path from 'path';
 import process from 'process';
 import parse from './parsers.js';
 import buildTree from './buildTree.js';
-import stylish from './formatters/stylish.js';
+import chooseFormat from './formatters/index.js';
 
-const generateDiff = (filepath1, filepath2, formatter = 'stylish') => {
+const generateDiff = (filepath1, filepath2, formatName = 'stylish') => {
   const path1 = path.resolve(process.cwd(), filepath1);
   const path2 = path.resolve(process.cwd(), filepath2);
 
@@ -19,7 +19,7 @@ const generateDiff = (filepath1, filepath2, formatter = 'stylish') => {
   const data2 = parse(content2, format2);
   const differences = buildTree(data1, data2);
 
-  return stylish(differences);
+  return chooseFormat(differences, formatName);
 };
 
 export default generateDiff;
