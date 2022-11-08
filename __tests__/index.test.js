@@ -14,8 +14,9 @@ test('differences', () => {
   const filepath2 = getFixturePath('file2.json');
   const filepath3 = getFixturePath('file3.yml');
   const filepath4 = getFixturePath('file4.yaml');
-  const expectedResult = readFile('result.txt').trim();
 
-  expect(generateDiff(filepath1, filepath2)).toEqual(expectedResult);
-  expect(generateDiff(filepath3, filepath4)).toEqual(expectedResult);
+  const expectedResult1 = readFile('resultStylish.txt').trim();
+
+  expect(generateDiff(filepath1, filepath2, 'stylish')).toEqual(expectedResult1);
+  expect(generateDiff(filepath3, filepath4, 'stylish')).toEqual(expectedResult1);
 });
