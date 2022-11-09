@@ -14,3 +14,6 @@
 
 #### Comparing nested json & yaml files with 'stylish' formatter
 [![asciicast step 6](https://asciinema.org/a/BeTrUi63gsNjsagiOMIxfngOx.svg)](https://asciinema.org/a/BeTrUi63gsNjsagiOMIxfngOx)
+
+#### Comparing nested json & yaml files with 'plain' formatter
+[![asciicast step 7](https://asciinema.org/a/wky0dVLJcEj8uuNjYaDLKZtnA.svg)](https://asciinema.org/a/wky0dVLJcEj8uuNjYaDLKZtnA)
