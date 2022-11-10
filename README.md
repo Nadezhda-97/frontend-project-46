@@ -12,8 +12,11 @@
 #### Comparing flat yaml files
 [![asciicast step 5](https://asciinema.org/a/uXDzmh8oijb9yh9ztpdaiK5dc.svg)](https://asciinema.org/a/uXDzmh8oijb9yh9ztpdaiK5dc)
 
-#### Comparing nested json & yaml files with 'stylish' formatter
+#### Comparing nested json & yaml files used 'stylish' formatter
 [![asciicast step 6](https://asciinema.org/a/BeTrUi63gsNjsagiOMIxfngOx.svg)](https://asciinema.org/a/BeTrUi63gsNjsagiOMIxfngOx)
 
-#### Comparing nested json & yaml files with 'plain' formatter
+#### Comparing nested json & yaml files used 'plain' formatter
 [![asciicast step 7](https://asciinema.org/a/wky0dVLJcEj8uuNjYaDLKZtnA.svg)](https://asciinema.org/a/wky0dVLJcEj8uuNjYaDLKZtnA)
+
+#### Comparing nested json & yaml files used 'json' formatter
+[![asciicast step 8](https://asciinema.org/a/7nOAsth4VAYagKz9K4c6fJbBR.svg)](https://asciinema.org/a/7nOAsth4VAYagKz9K4c6fJbBR)
