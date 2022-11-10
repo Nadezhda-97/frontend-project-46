@@ -17,10 +17,14 @@ test('differences', () => {
 
   const expectedResult1 = readFile('resultStylish.txt').trim();
   const expectedResult2 = readFile('resultPlain.txt').trim();
+  const expectedResult3 = readFile('resultJson.txt').trim();
 
   expect(generateDiff(filepath1, filepath2, 'stylish')).toEqual(expectedResult1);
   expect(generateDiff(filepath3, filepath4, 'stylish')).toEqual(expectedResult1);
 
   expect(generateDiff(filepath1, filepath2, 'plain')).toEqual(expectedResult2);
   expect(generateDiff(filepath3, filepath4, 'plain')).toEqual(expectedResult2);
+
+  expect(generateDiff(filepath1, filepath2, 'json')).toEqual(expectedResult3);
+  expect(generateDiff(filepath3, filepath4, 'json')).toEqual(expectedResult3);
 });
