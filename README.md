@@ -1,8 +1,28 @@
+# Difference Calculator
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Nadezhda-97/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/Nadezhda-97/frontend-project-46/actions)
 [![Node CI](https://github.com/Nadezhda-97/frontend-project-46/actions/workflows/my-tests.yml/badge.svg)](https://github.com/Nadezhda-97/frontend-project-46/actions/workflows/my-tests.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/32cb0a6e0700956cbdef/maintainability)](https://codeclimate.com/github/Nadezhda-97/frontend-project-46/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/32cb0a6e0700956cbdef/test_coverage)](https://codeclimate.com/github/Nadezhda-97/frontend-project-46/test_coverage)
+
+Difference Calculator is a program that compares two configuration files and shows a difference.
+Supported formats: json, yaml, yml.
+Generating result as "plain text" , "stylish" and "json".
+
+### Requirements
+* Node.js (version 13.2.0 and above)
+
+### Install
+```
+git clone git@github.com:Nadezhda-97/frontend-project-46.git
+```
+```
+cd frontend-project-46
+```
+```
+make install
+```
 
 ### Demo
 
