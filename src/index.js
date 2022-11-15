@@ -5,21 +5,20 @@ import parse from './parsers.js';
 import buildTree from './buildTree.js';
 import chooseFormat from './formatters/index.js';
 
-const generateDiff = (filepath1, filepath2, formatName = 'stylish') => {
-  const path1 = path.resolve(process.cwd(), filepath1);
-  const path2 = path.resolve(process.cwd(), filepath2);
+const buildAbsolutePath = (filepath) => path.resolve(process.cwd(), filepath);
+const getFormat = (filepath) => path.extname(filepath).slice(1);
+const getData = (filepath) => {
+  const content = fs.readFileSync(filepath, 'utf-8');
+  const format = getFormat(filepath);
+  return parse(content, format);
+};
 
-  const content1 = fs.readFileSync(path1, 'utf-8');
-  const content2 = fs.readFileSync(path2, 'utf-8');
-
-  const format1 = path.extname(path1);
-  const format2 = path.extname(path2);
-
-  const data1 = parse(content1, format1);
-  const data2 = parse(content2, format2);
+const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
+  const data1 = getData(buildAbsolutePath(filepath1));
+  const data2 = getData(buildAbsolutePath(filepath2));
   const differences = buildTree(data1, data2);
 
   return chooseFormat(differences, formatName);
 };
 
-export default generateDiff;
+export default genDiff;
