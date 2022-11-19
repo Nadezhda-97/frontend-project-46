@@ -1,7 +1,7 @@
 import stylish from './stylish.js';
 import plain from './plain.js';
 
-const chooseFormat = (data, format) => {
+const formatData = (data, format) => {
   switch (format) {
     case 'stylish':
       return stylish(data);
@@ -14,4 +14,4 @@ const chooseFormat = (data, format) => {
   }
 };
 
-export default chooseFormat;
+export default formatData;

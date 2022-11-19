@@ -20,15 +20,15 @@ const stylish = (data) => {
     const result = tree.map((diff) => {
       switch (diff.type) {
         case 'added':
-          return `${getStringIndent(depth)}+ ${diff.name}: ${buildString(diff.value, depth)}`;
+          return `${getStringIndent(depth)}+ ${diff.key}: ${buildString(diff.value, depth)}`;
         case 'deleted':
-          return `${getStringIndent(depth)}- ${diff.name}: ${buildString(diff.value, depth)}`;
+          return `${getStringIndent(depth)}- ${diff.key}: ${buildString(diff.value, depth)}`;
         case 'changed':
-          return `${getStringIndent(depth)}- ${diff.name}: ${buildString(diff.value1, depth)}\n${getStringIndent(depth)}+ ${diff.name}: ${buildString(diff.value2, depth)}`;
+          return `${getStringIndent(depth)}- ${diff.key}: ${buildString(diff.value1, depth)}\n${getStringIndent(depth)}+ ${diff.key}: ${buildString(diff.value2, depth)}`;
         case 'unchanged':
-          return `${getStringIndent(depth)}  ${diff.name}: ${buildString(diff.value, depth)}`;
+          return `${getStringIndent(depth)}  ${diff.key}: ${buildString(diff.value, depth)}`;
         case 'nested':
-          return `${getStringIndent(depth)}  ${diff.name}: ${iter(diff.children, depth + 1)}`;
+          return `${getStringIndent(depth)}  ${diff.key}: ${iter(diff.children, depth + 1)}`;
         default:
           throw new Error(`Unknown type: ${diff.type}`);
       }

@@ -13,8 +13,8 @@ const plain = (data) => {
     const result = current
       .filter((diff) => diff.type !== 'unchanged')
       .flatMap((diff) => {
-        const { name } = diff;
-        const newPath = [...path, name];
+        const { key } = diff;
+        const newPath = [...path, key];
 
         switch (diff.type) {
           case 'added':
