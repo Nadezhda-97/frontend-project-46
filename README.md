@@ -6,9 +6,11 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/32cb0a6e0700956cbdef/maintainability)](https://codeclimate.com/github/Nadezhda-97/frontend-project-46/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/32cb0a6e0700956cbdef/test_coverage)](https://codeclimate.com/github/Nadezhda-97/frontend-project-46/test_coverage)
 
-Difference Calculator is a program that compares two configuration files and shows a difference.
+Difference Calculator is a cli-program that compares two configuration files and shows a difference.
+
 Supported formats: json, yaml, yml.
-Generating result as "plain text" , "stylish" and "json".
+
+Generating result as "stylish" (as default), "plain text" and "json".
 
 ### Requirements
 * Node.js (version 13.2.0 and above)
@@ -22,6 +24,15 @@ cd frontend-project-46
 ```
 ```
 make install
+```
+### How to use
+```
+$ gendiff [options] <filepath1> <filepath2>
+
+Options:
+-V, --version          output current app version
+-f, --format <type>    select format for output ("stylish", "plain" or "json")
+-h, --help             output help information
 ```
 
 ### Demo
